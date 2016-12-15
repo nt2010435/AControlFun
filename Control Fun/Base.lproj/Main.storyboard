@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Control_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WUY-Um-n8V">
+                                <rect key="frame" x="101" y="20" width="172" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XtQ-nj-8AM">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6LI-kv-NWw">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="80"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="b1a-rc-gW6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="172" height="80"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kZ-QI-iPz">
+                                <rect key="frame" x="90.5" y="138" width="270.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="ZJL-Lk-kRa"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oav-Yo-g3s">
+                                <rect key="frame" x="32.5" y="144" width="50" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QjU-5D-FBv">
+                                <rect key="frame" x="90.5" y="186" width="270.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="cS2-uw-sOs"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RV6-QV-x8H">
+                                <rect key="frame" x="16" y="191.5" width="66.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="RV6-QV-x8H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2cL-vE-zu2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2kZ-QI-iPz" secondAttribute="trailing" constant="-2" id="8Gh-Qj-PyI"/>
+                            <constraint firstItem="WUY-Um-n8V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUk-Au-OQp"/>
+                            <constraint firstItem="2kZ-QI-iPz" firstAttribute="leading" secondItem="oav-Yo-g3s" secondAttribute="trailing" constant="8" symbolic="YES" id="KSX-nW-3Qk"/>
+                            <constraint firstItem="2kZ-QI-iPz" firstAttribute="trailing" secondItem="QjU-5D-FBv" secondAttribute="trailing" id="MFH-lI-ckU"/>
+                            <constraint firstItem="oav-Yo-g3s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="124" id="Xct-dk-O4X"/>
+                            <constraint firstItem="QjU-5D-FBv" firstAttribute="leading" secondItem="RV6-QV-x8H" secondAttribute="trailing" constant="8" symbolic="YES" id="bJD-UD-hNa"/>
+                            <constraint firstItem="RV6-QV-x8H" firstAttribute="top" secondItem="oav-Yo-g3s" secondAttribute="bottom" constant="27" id="c7o-l7-tdi"/>
+                            <constraint firstItem="WUY-Um-n8V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="e4S-5m-e4E"/>
+                            <constraint firstItem="2kZ-QI-iPz" firstAttribute="leading" secondItem="QjU-5D-FBv" secondAttribute="leading" id="eGl-d7-V2j"/>
+                            <constraint firstItem="2kZ-QI-iPz" firstAttribute="top" secondItem="WUY-Um-n8V" secondAttribute="bottom" constant="38" id="oMC-ks-crD"/>
+                            <constraint firstItem="QjU-5D-FBv" firstAttribute="top" secondItem="2kZ-QI-iPz" secondAttribute="bottom" constant="18" id="ttd-Vn-j18"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="607-kl-i8g" appends="YES" id="ENK-GU-pxH"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="2kZ-QI-iPz" id="ybV-Lz-nyS"/>
+                        <outlet property="numberField" destination="QjU-5D-FBv" id="eSi-Sl-pV8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="607-kl-i8g">
+                    <connections>
+                        <action selector="onTapGestureRecognized:" destination="BYZ-38-t0r" id="ib8-y2-CGT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="24" y="12"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apress_logo" width="172" height="80"/>
+    </resources>
 </document>
