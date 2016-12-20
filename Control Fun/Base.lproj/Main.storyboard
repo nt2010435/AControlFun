@@ -70,30 +70,92 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-d8-ccn">
+                                <rect key="frame" x="64" y="233" width="297" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="rYy-wv-kd2"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fjf-Y4-hWu"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gri-F9-1QM">
+                                <rect key="frame" x="29.5" y="238.5" width="28.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vht-lC-sYe">
+                                <rect key="frame" x="16" y="336" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UI0-e6-YFq"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfC-Pv-UK0">
+                                <rect key="frame" x="310" y="336" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="xg3-PZ-m3u"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwo-T2-zr2">
+                                <rect key="frame" x="16" y="336" width="343" height="38"/>
+                                <state key="normal" title="Do Something" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SZk-zC-AMv"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="piK-eT-4aU">
+                                <rect key="frame" x="118" y="283" width="139" height="29"/>
+                                <segments>
+                                    <segment title="Switches"/>
+                                    <segment title="Button"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="dMb-I4-wcL"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97381132841110229" green="0.79919993877410889" blue="0.0078863194212317467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="cfC-Pv-UK0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="316" id="2Rb-3v-RUM"/>
                             <constraint firstItem="RV6-QV-x8H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2cL-vE-zu2"/>
+                            <constraint firstItem="bQg-d8-ccn" firstAttribute="centerY" secondItem="Gri-F9-1QM" secondAttribute="centerY" id="70i-cc-gRs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2kZ-QI-iPz" secondAttribute="trailing" constant="-2" id="8Gh-Qj-PyI"/>
                             <constraint firstItem="WUY-Um-n8V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUk-Au-OQp"/>
+                            <constraint firstItem="bQg-d8-ccn" firstAttribute="leading" secondItem="Gri-F9-1QM" secondAttribute="trailing" constant="8" symbolic="YES" id="DbK-vP-ZSd"/>
                             <constraint firstItem="2kZ-QI-iPz" firstAttribute="leading" secondItem="oav-Yo-g3s" secondAttribute="trailing" constant="8" symbolic="YES" id="KSX-nW-3Qk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bwo-T2-zr2" secondAttribute="trailing" id="LAb-yO-eoj"/>
                             <constraint firstItem="2kZ-QI-iPz" firstAttribute="trailing" secondItem="QjU-5D-FBv" secondAttribute="trailing" id="MFH-lI-ckU"/>
+                            <constraint firstItem="bQg-d8-ccn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Wu1-79-7g1"/>
                             <constraint firstItem="oav-Yo-g3s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="124" id="Xct-dk-O4X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cfC-Pv-UK0" secondAttribute="trailing" id="Y2B-Ah-lcl"/>
                             <constraint firstItem="QjU-5D-FBv" firstAttribute="leading" secondItem="RV6-QV-x8H" secondAttribute="trailing" constant="8" symbolic="YES" id="bJD-UD-hNa"/>
                             <constraint firstItem="RV6-QV-x8H" firstAttribute="top" secondItem="oav-Yo-g3s" secondAttribute="bottom" constant="27" id="c7o-l7-tdi"/>
                             <constraint firstItem="WUY-Um-n8V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="e4S-5m-e4E"/>
                             <constraint firstItem="2kZ-QI-iPz" firstAttribute="leading" secondItem="QjU-5D-FBv" secondAttribute="leading" id="eGl-d7-V2j"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vht-lC-sYe" secondAttribute="leading" id="jIq-3j-Gaj"/>
                             <constraint firstItem="2kZ-QI-iPz" firstAttribute="top" secondItem="WUY-Um-n8V" secondAttribute="bottom" constant="38" id="oMC-ks-crD"/>
+                            <constraint firstItem="bQg-d8-ccn" firstAttribute="top" secondItem="QjU-5D-FBv" secondAttribute="bottom" constant="17" id="q7k-GW-01i"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="bwo-T2-zr2" secondAttribute="leading" id="rxX-OX-Udb"/>
+                            <constraint firstItem="bwo-T2-zr2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="316" id="tGd-gp-2gB"/>
                             <constraint firstItem="QjU-5D-FBv" firstAttribute="top" secondItem="2kZ-QI-iPz" secondAttribute="bottom" constant="18" id="ttd-Vn-j18"/>
+                            <constraint firstItem="piK-eT-4aU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="263" id="ui1-3t-gaM"/>
+                            <constraint firstItem="piK-eT-4aU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wea-C5-uqX"/>
+                            <constraint firstItem="vht-lC-sYe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="316" id="zVS-WD-6NX"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="607-kl-i8g" appends="YES" id="ENK-GU-pxH"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomethingButton" destination="bwo-T2-zr2" id="vAL-Sf-8yi"/>
+                        <outlet property="leftSwitch" destination="vht-lC-sYe" id="cGD-um-msb"/>
                         <outlet property="nameField" destination="2kZ-QI-iPz" id="ybV-Lz-nyS"/>
                         <outlet property="numberField" destination="QjU-5D-FBv" id="eSi-Sl-pV8"/>
+                        <outlet property="rightSwitch" destination="cfC-Pv-UK0" id="Gx0-e7-h4N"/>
+                        <outlet property="sliderLabel" destination="Gri-F9-1QM" id="j7F-7r-5cR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,10 +165,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24" y="12"/>
+            <point key="canvasLocation" x="23.199999999999999" y="11.244377811094454"/>
         </scene>
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>
