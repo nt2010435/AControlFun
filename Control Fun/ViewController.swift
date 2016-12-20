@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         let yesAction = UIAlertAction(title: "Yes, I'm sure", style: .destructive, handler: {action in
              let msg = self.nameField.text!.isEmpty
                 ?"You can breathe easy, everything went OK."
-                :"You can breathe easy, \(self.nameField.text),"+"everything went OK."
+                :"You can breathe easy, "+self.nameField.text!+", everything went OK."
              let controller2 = UIAlertController(title: "Something Was Done", message: msg, preferredStyle: .alert)
              let cancelAcdtion = UIAlertAction(title: "Phew!", style: .cancel, handler: nil)
              controller2.addAction(cancelAcdtion)
